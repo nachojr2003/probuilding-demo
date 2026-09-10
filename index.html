@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProBuilding – Empresa Inmobiliaria</title>
+<link rel="icon" href="./assets/cropped-cropped-favicon-probuilding-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="./assets/cropped-cropped-favicon-probuilding-180x180.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C500%2C600%2C700%2C800%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i&subset=latin%2Clatin-ext&ver=1.2.7">
+<style>
+/* ===== base ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f2ede7;color:#30373e;
+  font-family:-apple-system, system-ui, "system-ui", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size:16px;line-height:1.5}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3,h4{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 15px}
+
+/* ===== header ===== */
+.hdr{background:#000;position:relative;z-index:5}
+.hdr-in{height:132px;display:flex;align-items:center}
+.logo{align-self:flex-start;margin:21px 0 0 5px}
+.logo img{width:155px}
+.nav{flex:1;display:flex;justify-content:flex-end;padding-right:20px}
+.nav ul{display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:529px}
+.nav a{font-family:"Ubuntu",sans-serif;display:flex;align-items:center;justify-content:center;height:46px;padding:0;color:#fff;
+  font-size:16px;line-height:16px;font-weight:500;white-space:nowrap}
+.nav a:hover{color:#7fe847}
+.car{margin-left:9px;display:block}
+.nav li:nth-child(1) a{width:78px}
+.nav li:nth-child(2) a{width:166px}
+.nav li:nth-child(3) a{width:149px}
+.nav li:nth-child(4) a{width:136px}
+.nav li:nth-child(5) a{width:130px}
+.hdr-cta{display:flex;align-items:center;gap:16px;margin-right:2px}
+.btn-h{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:33px;
+  border-radius:2px;font-size:13px;line-height:13px;font-weight:600;padding:0 14px}
+.btn-w{background:#fff;color:#000;width:128px}
+.btn-g{background:#2ac215;color:#fff;width:122px}
+.btn-h svg{display:block;flex:none}
+.burger{display:none;background:none;border:0;padding:0;cursor:pointer}
+
+/* ===== hero ===== */
+.hero{position:relative;height:520px;overflow:hidden;
+  background:#f2ede7 url("./assets/slide02.jpg") center center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(180deg,#4FA800C4 0%,#000000 91%);opacity:.78}
+.hero-in{position:relative;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding-bottom:30px;text-align:center}
+.hero h2{font-family:"Oxygen",sans-serif;position:relative;display:inline-block;color:#fff;font-size:22.5px;line-height:27px;
+  font-weight:600;text-transform:capitalize;letter-spacing:.2px}
+.hero h2::before{content:"";position:absolute;left:-11px;top:-4px;bottom:-4px;width:4px;background:#00b4dd}
+.hero h1{font-family:"Ubuntu",sans-serif;margin-top:10px;color:#fff;font-size:63px;line-height:69.3px;font-weight:700}
+
+/* ===== proyectos ===== */
+.dark{background:#000;color:#fff}
+.proy{padding-bottom:70px;margin-top:-99px;position:relative;z-index:2}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{background:#fff;padding:15px;color:#000;box-shadow:0 0 24px rgba(0,0,0,.25)}
+.card-img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.tag{background:#ffe30a;color:#000;text-align:center;font-size:12px;line-height:23px;
+  font-weight:700;letter-spacing:.6px;margin-top:10px}
+.card h3{text-align:center;font-size:21px;line-height:26px;font-weight:700;margin-top:8px;letter-spacing:.3px}
+.card p{text-align:center;font-size:12.5px;line-height:16px;font-weight:700;margin:2px 0 0;letter-spacing:.2px}
+.desc{margin:12px auto 14px;width:100%}
+.vermas{display:flex;align-items:center;justify-content:center;gap:8px;height:45px;
+  background:#4fa800;color:#fff;font-size:14px;font-weight:600;letter-spacing:.8px}
+.vermas:hover{background:#4cab04}
+
+/* ===== servicios ===== */
+.serv{padding:60px 0 90px}
+.serv-grid{display:grid;grid-template-columns:200px 200px 1fr;gap:44px 40px;align-items:start}
+.serv-item h4{color:#7fe847;font-size:22px;line-height:26px;font-weight:700;text-align:center}
+.serv-item p{color:#fff;font-size:12.5px;line-height:17px;text-align:center;margin:14px 0 0}
+.claim{grid-row:span 2;align-self:center;padding-left:20px}
+.claim h3{color:#fff;font-size:44px;line-height:52px;font-weight:600;letter-spacing:-.5px}
+.claim hr{border:0;border-top:4px solid #4fa800;width:160px;margin:26px 0 22px}
+.claim p{color:#fff;font-size:17px;margin:0;opacity:.9}
+
+/* ===== footer ===== */
+.ft{background:#111416;color:#c9ced3;padding:60px 0 30px;font-size:13.5px;line-height:22px}
+.ft-grid{display:grid;grid-template-columns:1.3fr 1.4fr 1fr;gap:40px}
+.ft img{width:170px;margin-bottom:18px}
+.ft h5{color:#fff;font-size:15px;font-weight:700;letter-spacing:1px;margin:0 0 14px}
+.ft a:hover{color:#7fe847}
+.ft li{margin-bottom:6px}
+.soc{display:flex;gap:12px;margin-top:18px}
+.soc a{width:34px;height:34px;border-radius:50%;background:#23282d;display:flex;align-items:center;justify-content:center}
+.soc a:hover{background:#4fa800}
+.ft-bot{border-top:1px solid #23282d;margin-top:40px;padding-top:20px;font-size:12px;color:#69727d;text-align:center}
+
+/* ===== responsive ===== */
+@media (max-width:1024px){
+  .hdr-in{height:100px}
+  .nav{display:none}
+  .burger{display:block}
+  .hero{height:460px}
+  .hero h1{font-size:44px;line-height:50px}
+  .cards{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .proy{margin-top:-70px}
+  .serv-grid{grid-template-columns:1fr 1fr;gap:34px 30px}
+  .claim{grid-row:auto;grid-column:span 2;padding-left:0;text-align:center}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media (max-width:767px){
+  .wrap{padding:0 15px}
+  .hdr-in{height:76px}
+  .logo img{width:90px}
+  .hdr-cta{gap:32px;margin-left:auto;margin-right:17px}  /* el nav se oculta: sin margin-left:auto los botones se pegan al logo */
+  .btn-h span{display:none}
+  .btn-w{width:53px;height:32px;padding:0}
+  .btn-g{display:none}
+  .hero{height:449px}
+  .hero-in{padding-bottom:30px}
+  .hero h2{font-size:22.5px;line-height:27px}
+  .hero h1{font-size:33px;line-height:36.3px;margin-top:12px}
+  .proy{margin-top:-25px;padding-bottom:50px}
+  .cards{max-width:322px}
+  .serv{padding:44px 0 60px}
+  .serv-grid{grid-template-columns:1fr;gap:30px}
+  .claim{grid-column:auto}
+  .claim h3{font-size:32px;line-height:38px}
+  .ft-grid{grid-template-columns:1fr;gap:26px;text-align:center}
+  .ft img{margin:0 auto 18px}
+  .soc{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top"><img src="./assets/logo2.png" alt="ProBuilding Inmobiliaria" width="193" height="76"></a>
+    <nav class="nav">
+      <ul>
+        <li><a href="#top">HOME</a></li>
+        <li><a href="#nosotros">QUIENES SOMOS</a></li>
+        <li><a href="#proyectos">PROYECTOS<span class="car"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+        <li><a href="#servicios">SERVICIOS<span class="car"><svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+        <li><a href="#contacto">POST-VENTA</a></li>
+      </ul>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn-h btn-w" href="#contacto">
+        <svg width="14" height="11" viewBox="0 0 16 12" fill="none"><rect x=".8" y=".8" width="14.4" height="10.4" stroke="currentColor" stroke-width="1.4"/><path d="M1.4 1.6L8 6.6l6.6-5" stroke="currentColor" stroke-width="1.4"/></svg>
+        <span>Escríbenos</span></a>
+      <a class="btn-h btn-g" href="#contacto">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 012.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.23 8.23 0 01-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 01-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24zm-2.5 3.9c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.48-.6 1.69-1.19.2-.58.2-1.08.15-1.19-.06-.1-.23-.17-.48-.29-.25-.13-1.48-.73-1.71-.81-.23-.09-.4-.13-.56.12-.17.25-.65.81-.79.98-.15.16-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.55-1.36-.76-1.85-.2-.48-.4-.42-.55-.42h-.47z"/></svg>
+        <span>WhatsApp</span></a>
+      <button class="burger" aria-label="Menú">
+        <svg width="30" height="22" viewBox="0 0 30 22" fill="none"><path d="M1 2h28M1 11h28M1 20h28" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <h2>ProBUILDING</h2>
+    <h1>Proyectos Inmobiliarios de Calidad</h1>
+  </div>
+</section>
+
+<section class="dark" id="proyectos">
+  <div class="wrap proy">
+    <div class="cards">
+      <article class="card">
+        <img class="card-img" src="./assets/icono-ocean4_2.jpg" alt="OCEAN 4" width="500" height="500">
+        <div class="tag">PRE-VENTA</div>
+        <h3>OCEAN 4</h3>
+        <p>PLAYA PUNTA ROCAS</p>
+        <img class="desc" src="./assets/descrip-ocean4_2.jpg" alt="2 dormitorios, desde 77m2 hasta 112m2" width="348" height="106">
+        <a class="vermas" href="#contacto">VER MÁS <svg width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1.5 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="card">
+        <img class="card-img" src="./assets/icono-ocean5.jpg" alt="OCEAN 5" width="500" height="500">
+        <div class="tag">PRE-VENTA</div>
+        <h3>OCEAN 5</h3>
+        <p>PLAYA BIKINI (PUNTA NEGRA)</p>
+        <img class="desc" src="./assets/descrip-ocean5.jpg" alt="3 a 4 dormitorios, desde 150m2 hasta 276m2" width="348" height="106">
+        <a class="vermas" href="#contacto">VER MÁS <svg width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1.5 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="card">
+        <img class="card-img" src="./assets/icono-ocean6.jpg" alt="OCEAN 6" width="500" height="500">
+        <div class="tag">PRE-VENTA</div>
+        <h3>OCEAN 6</h3>
+        <p>PLAYA BIKINI (PUNTA NEGRA)</p>
+        <img class="desc" src="./assets/descrip-ocean6.jpg" alt="3 a 4 dormitorios, desde 111m2 hasta 257m2" width="348" height="106">
+        <a class="vermas" href="#contacto">VER MÁS <svg width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1.5 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="servicios">
+  <div class="wrap serv">
+    <div class="serv-grid">
+      <div class="serv-item">
+        <h4>Diseño y planificación de proyectos:</h4>
+        <p>Ofrecemos servicios de diseño arquitectónico y planificación de proyectos, realizamos los planos, cálculos estructurales, estudios de suelo, entre otros.</p>
+      </div>
+      <div class="serv-item">
+        <h4>Construcción de edificios y viviendas</h4>
+        <p>Nuestro principal servicio es la construcción de edificios y viviendas, en el cual se lleva a cabo la ejecución de la estructura, instalaciones eléctricas, plomería, acabados, entre otros.</p>
+      </div>
+      <div class="claim" id="nosotros">
+        <h3>15 años de experiencia en construcción</h3>
+        <hr>
+        <p>Construcción de viviendas de calidad</p>
+      </div>
+      <div class="serv-item">
+        <h4>Remodelación y renovación:</h4>
+        <p>Otro de nuestros servicios es la remodelación y renovación de edificios y viviendas, realizamos mejoras o cambios en la estructura o diseño existente.</p>
+      </div>
+      <div class="serv-item">
+        <h4>Mantenimiento y reparación:</h4>
+        <p>Tambien ofrecemos mantenimiento y reparación de edificios y viviendas, en el cual se realizan reparaciones menores o mantenimiento preventivo para asegurar el correcto funcionamiento de las instalaciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft" id="contacto">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <img src="./assets/logo2.png" alt="ProBuilding Inmobiliaria" width="193" height="76">
+        <p>Somos una empresa dedicada a la gerencia y desarrollo de proyectos inmobiliarios en las mejores zonas y en pleno crecimiento del país</p>
+        <div class="soc">
+          <a href="#contacto" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.4-.12-2.38 0-4 1.45-4 4.11V9.9H7.6V13h2.7v8h3.2z"/></svg></a>
+          <a href="#contacto" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9a3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.51.01-4.75.07-1.15.05-1.77.24-2.18.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.18C2.38 8.49 2.37 8.86 2.37 12s.01 3.51.07 4.75c.05 1.15.24 1.77.4 2.18.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.18.4 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c1.15-.05 1.77-.24 2.18-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.18.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.05-1.15-.24-1.77-.4-2.18a3.6 3.6 0 00-.88-1.35c-.41-.41-.8-.67-1.35-.88-.41-.16-1.03-.35-2.18-.4C15.51 4.01 15.14 4 12 4zm0 3.04a4.96 4.96 0 110 9.92 4.96 4.96 0 010-9.92zm0 8.18a3.22 3.22 0 100-6.44 3.22 3.22 0 000 6.44zm6.32-8.38a1.16 1.16 0 11-2.32 0 1.16 1.16 0 012.32 0z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>CONTÁCTANOS</h5>
+        <ul>
+          <li>Calle Monte Rosa N° 240 Oficina 603, Urb. Chacarilla del Estanque - Santiago de Surco</li>
+          <li>228 - 3174</li>
+          <li>941-823314</li>
+          <li>ventas@probuilding.pe</li>
+          <li>postventa@probuilding.pe</li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROYECTOS EN VENTA</h5>
+        <ul>
+          <li><a href="#proyectos">OCEAN IV</a></li>
+          <li><a href="#proyectos">OCEAN V</a></li>
+          <li><a href="#proyectos">OCEAN VI</a></li>
+          <li><a href="#proyectos">PICO ALTO I</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">© ProBuilding Inmobiliaria · Gerencia y desarrollo de proyectos inmobiliarios</div>
+  </div>
+</footer>
+
+  <div data-ijv-demo-badge style="position:relative;z-index:1;padding:14px 16px 90px;text-align:center;font:400 12px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#94a3b8;background:#0f172a">
+    Demo preparada por <a href="https://ijvagency.com/" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:underline">IJV Agency</a> para ProBuilding — sitio de muestra, no es la web oficial.
+  </div>
+  <script>
+window["probuildingAgentConfig"] = Object.assign(window["probuildingAgentConfig"] || {}, { webhook: "https://meta.ijvagency.com/webhook/probuilding-demo-agent", leadsWebhook: "https://meta.ijvagency.com/webhook/probuilding-demo-leads" });
+/* ============================================================================
+ * PROBUILDING — Widget de chat embebible (IJV Agency)
+ * ----------------------------------------------------------------------------
+ * Generado por IJV Factory — NO editar a mano: cambios van al factory.config.json
+ * y se regenera. Patrón canónico extraído de mmdent/widget/agent.js.
+ *
+ * Distribución recomendada vía jsDelivr (repo público):
+ *   https://cdn.jsdelivr.net/gh/nachojr2003/probuilding-site@main/widget/agent.js
+ *
+ * Uso en el sitio del cliente:
+ *   <script>
+ *     window.probuildingAgentConfig = { }; // overrides opcionales — los defaults van embebidos
+ *   <\/script>
+ *   <script src=".../widget/agent.js" defer><\/script>
+ *
+ * Sin dependencias externas. IIFE puro, vanilla JS (ES5).
+ * ============================================================================ */
+(function () {
+  'use strict';
+
+  /* ---------------- Config con DEFAULTS embebidos (regla #11: si el
+   * integrador pasa config parcial, NADA queda undefined) ---------------- */
+  var DEFAULTS = {
+    n8nBase:        "https://meta.ijvagency.com",
+    webhook:        null,
+    leadsWebhook:   null,
+    privacyUrl:     '/politica-privacidad',
+    logoUrl:        "https://probuilding-demo.vercel.app/assets/logo-probuilding-widget.png",
+    primary:        '#4FA800',
+    secondary:      '#111416',
+    accent:         '#F5F5F5',
+    fontFamily:     "Inter,system-ui,-apple-system,'Segoe UI',sans-serif,'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji'",
+    timeoutMs:      45000,   /* >= 30s: queries con RAG completo cortan a 15s (regla #10).
+                              * 45000 y no 40000: la espera real que ve el usuario es
+                              * timeoutMs × (1 + maxRetries), así que el knob que importa
+                              * es maxRetries. Un turno vivo nunca llega a 40s (RAG p99
+                              * ~10s + self-call del retry-on-empty ~5s, regla #84): entre
+                              * 40 y 45 solo cambia cuánto tarda en rendirse lo ya muerto. */
+    maxRetries:     1,
+    typewriter:     true,
+    typewriterCps:  90,
+    agentName:      "el asistente de ProBuilding",
+    clientName:     "ProBuilding",
+    /* Subtítulo del encabezado: dice a QUÉ ATIENDE el agente, nunca qué es. Una
+     * etiqueta de bot aquí lo delata antes de que escriba una palabra (regla
+     * #114). Se personaliza con `agente.subtitulo_widget` en el config. */
+    headerSubtitle: "Departamentos frente al mar · Punta Rocas y Punta Negra",
+
+    whatsappNumber: "+51941823314",
+    whatsappLink:   "https://wa.me/51941823314",
+
+
+    welcomeMessage: "Hola, soy el asistente de ProBuilding. Te respondo al instante, a cualquier hora y también los fines de semana.\n\nTenemos departamentos frente al mar en Lima Sur:\n\n**Ocean 4** — Playa Punta Rocas · desde US$ 135,000 · últimas 2 unidades, entrega próxima.\n**Ocean 5** — Playa Bikini, Punta Negra · últimas 3 unidades (flat y dúplex).\n**Ocean 6** — Playa Bikini, Punta Negra · preventa, obra desde diciembre 2026.\n\n¿Cuál te interesa, o te ayudo a elegir?"
+  };
+  var CFG = window.probuildingAgentConfig = window.probuildingAgentConfig || {};
+  for (var k in DEFAULTS) { if (CFG[k] === undefined || CFG[k] === null) CFG[k] = DEFAULTS[k]; }
+  if (!CFG.webhook)      CFG.webhook      = CFG.n8nBase + '/webhook/probuilding-agent';
+  if (!CFG.leadsWebhook) CFG.leadsWebhook = CFG.n8nBase + '/webhook/probuilding-leads';
+
+  var QUICK_BUTTONS = [{"label":"¿Qué queda disponible?","mensaje":"¿Qué departamentos quedan disponibles y desde cuánto?"},{"label":"¿Dónde quedan?","mensaje":"¿Dónde quedan exactamente los proyectos? ¿Es Punta Hermosa?"},{"label":"Visitar el proyecto","mensaje":"Quiero coordinar una visita al proyecto"}];
+
+  /* ---------------- Utilidades ---------------- */
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function parseMd(text) {
+    var s = escapeHtml(text);
+    s = s.replace(/```([\s\S]*?)```/g, function (_, c) { return '<pre>' + c + '</pre>'; });
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+    s = s.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    s = s.replace(/(^|\s)(https?:\/\/[^\s<]+)/g,
+      '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+    s = s.replace(/(^|\n)- (.+)/g, '$1<li>$2</li>');
+    s = s.replace(/(<li>[\s\S]*?<\/li>)(?!\s*<li>)/g, '<ul>$1</ul>');
+    /* Regla #27: strip de placeholders alucinados por el LLM.
+       Restringido a placeholders CONOCIDOS: un strip genérico \[[a-z_]+\]
+       borraba texto legítimo entre corchetes (ej. "[PDF]", "[borrador]"). */
+    s = s.replace(/\{\{[^}]+\}\}/g, '').replace(/\{first_name\}/gi, '')
+      .replace(/\[(nombre|name|first_name|usuario|user)\]/gi, '');
+    /* Segunda capa: MARCAS INTERNAS del sistema. El nodo Finalize del workflow ya
+       las strippea; esto es la red por si un turno las deja pasar — el usuario
+       jamás debe leer "[CONSENT_OK]" ni "[PENDIENTE CLIENTE: precio]".
+       Lista EXPLÍCITA a propósito: un \[[A-Z_]{3,}\] genérico borraría texto
+       legítimo del negocio ("[PDF]", "[IVA]", "[RUC]") — misma lección que el
+       strip de placeholders de arriba (regla #27). Marca nueva en un workflow
+       ⇒ agregarla también aquí. */
+    s = s.replace(/\[\/?(CONSENT_OK|CONSENT|HANDOFF|ESCALATED|ESCALAR|LEAD_OK|NO_KB|IMG:[^\]]*|PENDIENTE[^\]]*)\]/gi, '');
+    s = s.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>');
+    return '<p>' + s + '</p>';
+  }
+
+  /* ---------------- Fotos dentro del mensaje del agente ----------------
+   * Contrato (genérico, sirve para cualquier cliente que mande imágenes): si una
+   * línea del mensaje contiene SOLO una URL de imagen, esa línea se pinta como
+   * <img> y el resto del texto fluye normal. Cualquier otra URL sigue siendo un
+   * enlace de texto, como siempre.
+   *
+   * Se eligió URL cruda y no un marcador propio a propósito: si algo falla, el
+   * peor caso es que se vea una URL (feo pero funcional); un marcador roto se
+   * leería como basura. Y el `finalize` de los workflows no lo strippearía.
+   *
+   * Seguridad: SOLO https + extensión de imagen conocida. La regex no admite
+   * espacios, comillas ni `<`/`>`, así que no hay forma de colar `javascript:`,
+   * `data:` ni un atributo extra; además la URL se asigna por PROPIEDAD
+   * (img.src = …), nunca concatenada dentro de innerHTML. */
+  var RE_FOTO     = /^https:\/\/[^\s<>"']+\.(?:webp|jpe?g|png)(?:\?[^\s<>"']*)?$/i;
+  var RE_HAY_FOTO = /^[ \t]*https:\/\/[^\s<>"']+\.(?:webp|jpe?g|png)(?:\?[^\s<>"']*)?[ \t\r]*$/im;
+
+  function splitFotos(text) {
+    var out = [], buf = [];
+    function cierra() {
+      var t = buf.join('\n').replace(/^\n+/, '').replace(/\n+$/, '');
+      if (t.replace(/\s/g, '')) out.push({ tipo: 'texto', texto: t });
+      buf = [];
+    }
+    String(text == null ? '' : text).split('\n').forEach(function (l) {
+      var s = l.trim();
+      if (RE_FOTO.test(s)) { cierra(); out.push({ tipo: 'foto', url: s }); }
+      else buf.push(l);
+    });
+    cierra();
+    return out;
+  }
+  /* Texto sin las líneas de foto. Si no hay fotos devuelve el original TAL CUAL
+   * (idéntico byte a byte): así el camino de siempre no cambia en nada. */
+  function sinFotos(text) {
+    var s = String(text == null ? '' : text);
+    if (!RE_HAY_FOTO.test(s)) return s;
+    var out = [], bl = splitFotos(s);
+    for (var i = 0; i < bl.length; i++) if (bl[i].tipo === 'texto') out.push(bl[i].texto);
+    return out.join('\n\n');
+  }
+  /* alt descriptivo desde el nombre del archivo: ".../dormitorio-1.webp" -> "Foto: dormitorio 1" */
+  function altFoto(url) {
+    var n = url.split('?')[0].split('/').pop().replace(/\.[a-z]+$/i, '').replace(/[-_]+/g, ' ').trim();
+    return n ? ('Foto: ' + n) : 'Foto';
+  }
+  /* Regla #95: si la foto 404ea se oculta — jamás el ícono de imagen rota.
+   * Regla #19: el re-scroll al onload queda como red. Con el 4/3 reservado el
+   * alto ya es el final y no hace falta, pero si la foto real NO es 4:3 el alto
+   * cambia al cargar — ahí sí hay que volver a bajar (scrollToBottom trae el rAF
+   * que Safari/iOS necesita). */
+  function prepFoto(img) {
+    /* setProperty con prioridad `important` y no `style.display='none'` a secas:
+     * la regla .ijv-msg img.ijv-foto necesita `display:block!important` para
+     * ganarle al CSS anti-emoji (regla #15), y un display inline SIN important
+     * pierde contra ella — la foto rota quedaba visible. Verificado en vivo. */
+    var falla = function () {
+      if (img.style.setProperty) img.style.setProperty('display', 'none', 'important');
+      else img.style.display = 'none';
+    };
+    img.onerror = falla;
+    img.onload  = function () { scrollToBottom(); };
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) falla();
+  }
+  /* Pinta el cuerpo de una burbuja del bot. Sin fotos ⇒ exactamente lo de antes. */
+  function renderBot(div, text) {
+    var s = String(text == null ? '' : text);
+    if (!RE_HAY_FOTO.test(s)) { div.innerHTML = parseMd(s); return; }
+    div.innerHTML = '';
+    if (div.className.indexOf('ijv-con-foto') < 0) div.className += ' ijv-con-foto';
+    var bl = splitFotos(s);
+    for (var i = 0; i < bl.length; i++) {
+      if (bl[i].tipo === 'foto') {
+        var img = document.createElement('img');
+        img.className = 'ijv-foto';
+        /* EAGER a propósito: `lazy` es para galerías largas fuera de pantalla.
+         * Aquí la foto entra al viewport en el mismo instante en que se pinta el
+         * mensaje, así que lazy solo agregaba latencia y dejaba un hueco blanco
+         * que se llenaba un segundo después. Son 1-2 fotos por mensaje. */
+        img.setAttribute('loading', 'eager');
+        img.setAttribute('fetchpriority', 'high');
+        img.setAttribute('decoding', 'async');
+        img.alt = altFoto(bl[i].url);
+        prepFoto(img);          /* handlers ANTES del src: un 404 instantáneo no se pierde */
+        img.src = bl[i].url;
+        div.appendChild(img);
+      } else {
+        /* Se desenvuelve el <p> del parseMd para que quede como hijo directo de
+         * .ijv-msg y le sigan aplicando los mismos estilos de siempre. */
+        var wrap = document.createElement('div');
+        wrap.innerHTML = parseMd(bl[i].texto);
+        while (wrap.firstChild) div.appendChild(wrap.firstChild);
+      }
+    }
+  }
+
+  function uuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  /* Regla #61: TTL de inactividad — Cmd+Shift+R NO limpia sessionStorage; sin
+   * TTL la Simple Memory del agente arrastra la conversación vieja. */
+  var SESSION_TTL_MS = 30 * 60 * 1000;
+  var SS_PREFIX = 'probuilding_';
+  function getSessionId() {
+    var s = sessionStorage.getItem(SS_PREFIX + 'session_id');
+    var last = parseInt(sessionStorage.getItem(SS_PREFIX + 'session_last') || '0', 10);
+    var now = Date.now();
+    if (!s || (last && (now - last) > SESSION_TTL_MS)) {
+      s = uuid();
+      sessionStorage.setItem(SS_PREFIX + 'session_id', s);
+      sessionStorage.removeItem(SS_PREFIX + 'messages');
+    }
+    sessionStorage.setItem(SS_PREFIX + 'session_last', String(now));
+    return s;
+  }
+  function resetSession() {
+    sessionStorage.removeItem(SS_PREFIX + 'session_id');
+    sessionStorage.removeItem(SS_PREFIX + 'session_last');
+    sessionStorage.removeItem(SS_PREFIX + 'messages');
+    return getSessionId();
+  }
+
+  /* Persistencia de mensajes: sobreviven al refresh, no al cerrar la pestaña */
+  function loadMessages() {
+    try { return JSON.parse(sessionStorage.getItem(SS_PREFIX + 'messages') || '[]'); }
+    catch (e) { return []; }
+  }
+  function saveMessage(role, text) {
+    try {
+      var m = loadMessages();
+      m.push({ role: role, text: text });
+      if (m.length > 60) m = m.slice(-60);
+      sessionStorage.setItem(SS_PREFIX + 'messages', JSON.stringify(m));
+    } catch (e) { /* quota: silencioso */ }
+  }
+
+  /* ---------------- CSS inyectado ----------------
+   * Regla #15: CSS defensivo para <img> (librerías emoji del sitio convierten
+   * unicode a <img>; sin esto un 👋 sale de 600px) + fuentes emoji en la pila. */
+  var CSS = [
+    /* --ijv-text es FIJO a proposito (regla de Nacho): las letras de los mensajes
+     * del agente van SIEMPRE en negro, nunca en un color de marca. El secundario
+     * queda solo para usos decorativos (gradiente del cal, toast). */
+    ':root{--ijv-primary:' + CFG.primary + ';--ijv-secondary:' + CFG.secondary + ';--ijv-accent:' + CFG.accent + ';--ijv-text:#111111;}',
+    '.ijv-launcher{position:fixed;bottom:22px;right:22px;height:60px;padding:0 22px;border-radius:30px;background:#fff;color:var(--ijv-primary);border:0;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;z-index:2147483000;transition:transform .2s ease}',
+    '.ijv-launcher:hover{transform:scale(1.05)}',
+    /* Los logos (launcher y encabezado) blindados igual que las fotos: es la
+     * MISMA familia de bug que la regla #15 — un `img{width:100%!important}`
+     * global del sitio del cliente le ganaba al `width:auto` de aquí y
+     * deformaba el logo (el del encabezado se comía media ventana del chat).
+     * Verificado en vivo con un sitio anfitrión hostil. */
+    '.ijv-launcher img{height:36px!important;width:auto!important;max-width:none!important;display:block!important;object-fit:contain}',
+    '.ijv-root *,.ijv-root *::before,.ijv-root *::after{box-sizing:border-box}',
+    '.ijv-root{position:fixed;bottom:100px;right:22px;width:380px;max-width:calc(100vw - 24px);height:600px;max-height:calc(100vh - 120px);background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden;z-index:2147483000;font-family:' + CFG.fontFamily + ';color:var(--ijv-text);transform:translateY(20px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .2s ease}',
+    '.ijv-root.ijv-open{transform:translateY(0);opacity:1;pointer-events:auto}',
+    '.ijv-head{background:var(--ijv-primary);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}',
+    '.ijv-head img{height:44px!important;width:auto!important;max-width:none!important;background:#fff;border-radius:10px;padding:6px 10px;flex-shrink:0;display:block!important}',
+    '.ijv-head .ijv-title{font-weight:700;font-size:15px;line-height:1.2}',
+    '.ijv-head .ijv-sub{font-size:12px;opacity:.85}',
+    '.ijv-head .ijv-actions{margin-left:auto;display:flex;gap:6px}',
+    '.ijv-head button{background:rgba(255,255,255,.15);border:0;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px}',
+    '.ijv-head button:hover{background:rgba(255,255,255,.28)}',
+    '.ijv-msgs{flex:1;overflow-y:auto;padding:16px;background:#FAFAFA;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}',
+    '.ijv-msg{max-width:84%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.45;word-wrap:break-word}',
+    '.ijv-msg p{margin:0 0 6px}.ijv-msg p:last-child{margin:0}',
+    '.ijv-msg ul{margin:4px 0 4px 18px;padding:0}.ijv-msg li{margin:2px 0}',
+    '.ijv-msg a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-msg code{background:rgba(0,0,0,.08);padding:1px 5px;border-radius:4px;font-size:13px}',
+    '.ijv-msg img{max-width:1.2em!important;max-height:1.2em!important;display:inline-block!important;vertical-align:text-bottom!important}',
+    /* Fotos que manda el agente. La regla de arriba aplasta CUALQUIER <img> a
+     * 1.2em para defenderse de las librerías de emoji del sitio (regla #15);
+     * esta gana por especificidad y solo alcanza a las fotos que pinta el
+     * widget. Los !important son contra un `img{width:100%!important}` global
+     * del sitio del cliente, que si no deforma la foto. */
+    /* `aspect-ratio:auto 4/3` reserva el hueco con el alto FINAL desde el primer
+     * frame: mientras la imagen no tiene proporción natural (o sea, mientras
+     * carga) vale el 4/3; apenas llega manda la proporción real de la imagen, así
+     * que una foto vertical o panorámica se ve bien igual. Sin esto la burbuja
+     * crecía de golpe al cargar y empujaba el texto. */
+    '.ijv-msg img.ijv-foto{display:block!important;width:100%!important;max-width:100%!important;max-height:none!important;height:auto!important;aspect-ratio:auto 4 / 3;vertical-align:baseline!important;border-radius:10px;margin:6px 0;background:rgba(0,0,0,.05)}',
+    '.ijv-msg img.ijv-foto:first-child{margin-top:0}',
+    '.ijv-msg img.ijv-foto:last-child{margin-bottom:0}',
+    '.ijv-msg.ijv-con-foto{max-width:92%}',
+    '.ijv-bot{align-self:flex-start;background:#fff;border:1px solid #E8E8E8;border-top-left-radius:4px;color:var(--ijv-text)}',
+    '.ijv-user{align-self:flex-end;background:var(--ijv-primary);color:#fff;border-top-right-radius:4px}',
+    '.ijv-user a{color:#fff}',
+    '.ijv-typing{align-self:flex-start;display:flex;gap:4px;padding:10px 14px;background:#fff;border:1px solid #E8E8E8;border-radius:14px;border-top-left-radius:4px}',
+    '.ijv-typing span{width:7px;height:7px;background:var(--ijv-primary);border-radius:50%;opacity:.4;animation:ijvBlink 1.2s infinite}',
+    '.ijv-typing span:nth-child(2){animation-delay:.2s}.ijv-typing span:nth-child(3){animation-delay:.4s}',
+    '@keyframes ijvBlink{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}',
+    '.ijv-cta{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 6px}',
+    '.ijv-pill{background:var(--ijv-accent);color:var(--ijv-primary);border:1px solid rgba(0,0,0,.08);padding:6px 12px;border-radius:999px;font-size:12.5px;cursor:pointer;font-weight:600;transition:all .15s;font-family:inherit}',
+    '.ijv-pill:hover{background:var(--ijv-primary);color:#fff;border-color:var(--ijv-primary)}',
+    '.ijv-form{background:#fff;border:1px solid #E8E8E8;border-radius:12px;padding:14px;margin:8px 0;display:flex;flex-direction:column;gap:8px;align-self:stretch}',
+    '.ijv-form h4{margin:0 0 4px;font-size:14px;color:var(--ijv-text)}',
+    '.ijv-form input,.ijv-form textarea{width:100%;padding:9px 11px;border:1px solid #D8D8D8;border-radius:8px;font-size:13.5px;font-family:inherit;color:var(--ijv-text);background:#fff}',
+    '.ijv-form input:focus,.ijv-form textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-form button{background:var(--ijv-primary);color:#fff;border:0;padding:10px;border-radius:8px;font-weight:600;cursor:pointer;font-size:13.5px;font-family:inherit}',
+    '.ijv-form button:disabled{opacity:.6;cursor:wait}',
+    '.ijv-form .ijv-hp{display:none!important}',
+    '.ijv-form .ijv-legal{margin:0;font-size:10.5px;line-height:1.45;color:#8a8a8a}',
+    '.ijv-form .ijv-legal a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-cal{background:linear-gradient(135deg,var(--ijv-primary),var(--ijv-secondary));border-radius:12px;padding:16px;margin:8px 0;align-self:stretch;color:#fff}',
+    '.ijv-cal p{margin:0 0 10px;font-size:13.5px;line-height:1.45}',
+    '.ijv-cal a{display:inline-block;background:#fff;color:var(--ijv-primary);font-weight:700;padding:9px 16px;border-radius:8px;text-decoration:none;font-size:13.5px}',
+    '.ijv-input{display:flex;gap:8px;padding:12px;border-top:1px solid #E8E8E8;background:#fff;align-items:flex-end}',
+    '.ijv-input textarea{flex:1;border:1px solid #D8D8D8;border-radius:12px;padding:10px 12px;font-family:inherit;font-size:14px;resize:none;max-height:100px;min-height:40px;color:var(--ijv-text)}',
+    '.ijv-input textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-input button{background:var(--ijv-primary);color:#fff;border:0;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}',
+    '.ijv-input button:disabled{opacity:.5;cursor:not-allowed}',
+    '.ijv-input button svg{width:18px;height:18px;fill:#fff}',
+    '.ijv-foot{padding:8px 12px 10px;background:#fff;border-top:1px solid #E8E8E8;text-align:center;font-size:10.5px;color:#8a8a8a;line-height:1.5}',
+    '.ijv-foot a{color:var(--ijv-primary);text-decoration:none;font-weight:600}',
+    '.ijv-foot a:hover{text-decoration:underline}',
+    '.ijv-foot .ijv-foot-powered{display:block;margin-top:3px;font-size:10px;color:#9a9a9a}',
+    '.ijv-foot .ijv-foot-powered a{color:#9a9a9a;font-weight:500}',
+    '.ijv-toast{position:absolute;top:70px;left:50%;transform:translateX(-50%);background:var(--ijv-secondary);color:#fff;padding:8px 14px;border-radius:8px;font-size:12.5px;opacity:0;transition:opacity .2s;pointer-events:none}',
+    '.ijv-toast.ijv-show{opacity:.95}',
+    '@media (max-width:480px){.ijv-root{width:calc(100vw - 16px);height:calc(100vh - 90px);bottom:80px;right:8px}.ijv-launcher{bottom:16px;right:16px;height:54px;padding:0 18px}.ijv-launcher img{height:32px!important}}'
+  ].join('');
+
+  /* ---------------- Render de la UI ---------------- */
+  var styleEl = document.createElement('style');
+  styleEl.textContent = CSS;
+  document.head.appendChild(styleEl);
+
+  var launcher = document.createElement('button');
+  launcher.className = 'ijv-launcher';
+  launcher.setAttribute('aria-label', 'Abrir chat ' + CFG.clientName);
+  launcher.innerHTML = '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />';
+  document.body.appendChild(launcher);
+
+  var root = document.createElement('div');
+  root.className = 'ijv-root';
+  root.setAttribute('role', 'dialog');
+  root.setAttribute('aria-label', 'Chat de ' + CFG.clientName);
+  root.innerHTML =
+    '<div class="ijv-head">' +
+      '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />' +
+      '<div>' +
+        '<div class="ijv-title">' + escapeHtml(CFG.clientName) + '</div>' +
+        '<div class="ijv-sub">' + escapeHtml(CFG.agentName) + ' · ' + escapeHtml(CFG.headerSubtitle) + '</div>' +
+      '</div>' +
+      '<div class="ijv-actions">' +
+        '<button type="button" class="ijv-reset" aria-label="Reiniciar conversación" title="Nueva conversación">⟳</button>' +
+        '<button type="button" class="ijv-close" aria-label="Cerrar chat" title="Cerrar">✕</button>' +
+      '</div>' +
+      '<div class="ijv-toast">Conversación reiniciada</div>' +
+    '</div>' +
+    '<div class="ijv-msgs" aria-live="polite" aria-atomic="false"></div>' +
+    '<div class="ijv-input">' +
+      '<textarea rows="1" maxlength="2000" placeholder="Escribe tu mensaje…" aria-label="Escribe tu mensaje"></textarea>' +
+      '<button type="button" class="ijv-send" aria-label="Enviar">' +
+        '<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>' +
+      '</button>' +
+    '</div>' +
+    '<div class="ijv-foot">' +
+      'Al usar este chat aceptas la <a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">política de privacidad</a> de ' + escapeHtml(CFG.clientName) + '.' +
+      '<span class="ijv-foot-powered"><a href="https://ijvagency.com/" target="_blank" rel="noopener">Powered by IJV</a></span>' +
+    '</div>';
+  document.body.appendChild(root);
+
+  /* Logo con fallback: si la URL del logo falla (típico en demos con dominio
+   * ficticio, o si el sitio del cliente mueve el archivo), el launcher cae a un
+   * ícono de chat y el header oculta la imagen rota — nunca se ve un img roto. */
+  var CHAT_ICON = '<svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.94 2 11.5c0 2.3 1.13 4.38 2.97 5.88L4 21l4.02-1.6c1.2.38 2.5.6 3.98.6 5.52 0 10-3.94 10-8.5S17.52 3 12 3z"/></svg>';
+  var lImg = launcher.querySelector('img');
+  if (lImg) {
+    var lFallback = function () { launcher.innerHTML = CHAT_ICON; };
+    lImg.onerror = lFallback;
+    if (lImg.complete && lImg.naturalWidth === 0) lFallback();
+  }
+  var hImg = root.querySelector('.ijv-head img');
+  if (hImg) {
+    var hFallback = function () { hImg.style.display = 'none'; };
+    hImg.onerror = hFallback;
+    if (hImg.complete && hImg.naturalWidth === 0) hFallback();
+  }
+
+  var $msgs  = root.querySelector('.ijv-msgs');
+  var $input = root.querySelector('textarea');
+  var $send  = root.querySelector('.ijv-send');
+  var $close = root.querySelector('.ijv-close');
+  var $reset = root.querySelector('.ijv-reset');
+  var $toast = root.querySelector('.ijv-toast');
+
+  var isOpen = false;
+  var isBusy = false;
+  var welcomed = false;
+
+  /* Regla #19: rAF obligatorio — sin él Safari/iOS deja el scroll anclado
+   * arriba mientras el bot escribe. */
+  function scrollToBottom() {
+    $msgs.scrollTop = $msgs.scrollHeight;
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(function () { $msgs.scrollTop = $msgs.scrollHeight; });
+    }
+  }
+  function showToast(t) {
+    $toast.textContent = t;
+    $toast.classList.add('ijv-show');
+    setTimeout(function () { $toast.classList.remove('ijv-show'); }, 1800);
+  }
+  function pushUser(text, opts) {
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-user';
+    div.textContent = text;
+    $msgs.appendChild(div);
+    scrollToBottom();
+    if (!opts || !opts.skipSave) saveMessage('user', text);
+  }
+  function pushBot(text, opts) {
+    opts = opts || {};
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-bot';
+    $msgs.appendChild(div);
+    if (!opts.skipSave) saveMessage('bot', text);
+    if (CFG.typewriter && !opts.instant) {
+      typewrite(div, text);
+    } else {
+      renderBot(div, text);
+      scrollToBottom();
+    }
+    return div;
+  }
+  /* Typewriter: re-parsea markdown en cada step y scrollea con rAF (regla #19).
+   * Las líneas de foto NO se tipean: se tipea solo la prosa (sinFotos) y las
+   * imágenes aparecen enteras al cerrar el mensaje. Si se tipearan, cada step
+   * recrearía el <img> (innerHTML se reemplaza completo 30 veces por segundo)
+   * y eso son decenas de descargas y parpadeo; además el usuario vería la URL
+   * cruda letra por letra. Sin fotos, sinFotos() devuelve el texto intacto y
+   * esto se comporta exactamente como siempre. */
+  function typewrite(div, fullText) {
+    var typed = sinFotos(fullText);
+    var i = 0;
+    var step = Math.max(1, Math.round(CFG.typewriterCps / 30));
+    var timer = setInterval(function () {
+      i += step;
+      if (i >= typed.length) {
+        clearInterval(timer);
+        renderBot(div, fullText);
+        scrollToBottom();
+        return;
+      }
+      div.innerHTML = parseMd(typed.slice(0, i));
+      scrollToBottom();
+    }, 33);
+  }
+  function pushCTA(buttons) {
+    var row = document.createElement('div');
+    row.className = 'ijv-cta';
+    buttons.forEach(function (b) {
+      var p = document.createElement('button');
+      p.type = 'button';
+      p.className = 'ijv-pill';
+      p.textContent = b.label;
+      p.addEventListener('click', b.onClick);
+      row.appendChild(p);
+    });
+    $msgs.appendChild(row);
+    scrollToBottom();
+    return row;
+  }
+  function showTyping() {
+    var t = document.createElement('div');
+    t.className = 'ijv-typing';
+    t.innerHTML = '<span></span><span></span><span></span>';
+    $msgs.appendChild(t);
+    scrollToBottom();
+    return t;
+  }
+  function removeEl(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
+
+  /* ---------------- Call al webhook del agente ---------------- */
+  function callAgent(message, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, CFG.timeoutMs);
+    return fetch(CFG.webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: message,
+        sessionId: getSessionId(),
+        origin: window.location.origin,
+        channel: 'web'
+      }),
+      signal: ctrl.signal
+    })
+    .then(function (r) {
+      clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .catch(function (err) {
+      clearTimeout(timer);
+      if (attempt < CFG.maxRetries) return callAgent(message, attempt + 1);
+      throw err;
+    });
+  }
+
+  /* ---------------- Lead form (honeypot anti-bot) ---------------- */
+  function showLeadForm(prefill) {
+    if ($msgs.querySelector('.ijv-form')) { scrollToBottom(); return; }
+    prefill = prefill || {};
+    var form = document.createElement('form');
+    form.className = 'ijv-form';
+    form.innerHTML =
+      '<h4>Déjanos tus datos y te contactamos</h4>' +
+      '<input type="text" name="nombre" placeholder="Nombre completo *" required value="' + escapeHtml(prefill.nombre || '') + '">' +
+      '<input type="email" name="email" placeholder="Correo electrónico *" required value="' + escapeHtml(prefill.email || '') + '">' +
+      '<input type="tel" name="telefono" placeholder="Teléfono / WhatsApp (opcional)" value="' + escapeHtml(prefill.telefono || '') + '">' +
+      '<textarea name="consulta" rows="2" placeholder="Cuéntanos brevemente (opcional)"></textarea>' +
+      '<input type="text" name="hp" class="ijv-hp" tabindex="-1" autocomplete="off">' +
+      /* Línea legal del formulario: el footer del chat enlaza la política, pero el
+       * formulario es donde el usuario ENTREGA sus datos — ahí tiene que estar el
+       * enlace (regla #14, misma lógica) y el recordatorio de qué NO mandar por
+       * este medio. La segunda frase se ajusta al vertical: un prestador de salud
+       * (legal.datos_salud) pide explícitamente no enviar estudios clínicos. */
+      '<p class="ijv-legal">Al enviar aceptas el tratamiento de tus datos conforme al ' +
+        '<a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">aviso de privacidad</a>. ' +
+        'No compartas por este medio información sensible ni documentos personales.</p>' +
+      '<button type="submit">Enviar</button>';
+    $msgs.appendChild(form);
+    scrollToBottom();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      var fd = new FormData(form);
+      fetch(CFG.leadsWebhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: fd.get('nombre'),
+          email: fd.get('email'),
+          telefono: fd.get('telefono'),
+          consulta: fd.get('consulta'),
+          hp: fd.get('hp'),
+          session_id: getSessionId(),
+          origin: window.location.origin
+        })
+      })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r; })
+      .then(function () {
+        removeEl(form);
+        pushBot('¡Listo! Recibimos tus datos. El equipo de ' + CFG.clientName + ' te contacta muy pronto.', { instant: true });
+        afterLeadCTA();
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Reintentar';
+        pushBot('Hubo un problema al enviar. Por favor intenta de nuevo.', { instant: true });
+      });
+    });
+  }
+
+  /* Regla #20: el usuario que dejó datos está CALIENTE — no cerrar con
+   * "te escribimos pronto" seco: CTA inmediato a Calendly / WhatsApp. */
+  function afterLeadCTA() {
+
+
+    pushCTA([
+      { label: 'Escribir por WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }
+    ]);
+
+  }
+
+  /* ---------------- Intent helpers ---------------- */
+
+  function wantsWhatsapp(text) {
+    return /\b(wh?at?s?app|wsp|whats|wasap)\b/i.test(text || '');
+  }
+
+  function wantsContactForm(text) {
+    return /\b(lead|llama(me|r)|mis datos|dejo mis datos|d[ée]jame datos|quiero que me contacten)\b/i.test(text || '');
+  }
+
+  /* ---------------- Envío de mensajes ---------------- */
+  function send(text) {
+    text = (text || '').trim();
+    if (!text || isBusy) return;
+    pushUser(text);
+    $input.value = '';
+    autoSize();
+    isBusy = true;
+    $send.disabled = true;
+
+    var typing = showTyping();
+
+    callAgent(text)
+      .then(function (data) {
+        removeEl(typing);
+        var reply = (data && (data.output || data.response || data.text)) || 'Disculpa, no pude procesar tu mensaje. ¿Puedes reformularlo?';
+        pushBot(reply);
+
+        var showsForm = (data && (data.lead_intent || data.showForm)) || wantsContactForm(text);
+        var wantsContactBtn = /\b(equipo|contactar|asesor|coordinar)\b/i.test(reply);
+        var ctas = [];
+
+        if ((data && data.whatsapp) || wantsWhatsapp(text)) {
+          ctas.push({ label: 'WhatsApp ' + CFG.whatsappNumber, onClick: function () { window.open(CFG.whatsappLink, '_blank'); } });
+        }
+
+        /* Regla #18: botón persistente, NUNCA auto-open que tape la respuesta */
+        if (wantsContactBtn && !showsForm) {
+          ctas.push({ label: 'Contactar al equipo', onClick: function () { showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono }); } });
+        }
+        if (ctas.length) pushCTA(ctas);
+        if (showsForm) showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono });
+      })
+      .catch(function () {
+        removeEl(typing);
+        pushBot('Ups, tuve un problema de conexión. ¿Puedes intentarlo de nuevo? También puedes escribirnos por WhatsApp al **' + CFG.whatsappNumber + '**.', { instant: true });
+
+        pushCTA([{ label: 'WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }]);
+
+      })
+      .then(function () {
+        isBusy = false;
+        $send.disabled = false;
+        $input.focus();
+      });
+  }
+
+  /* ---------------- Auto-resize textarea ---------------- */
+  function autoSize() {
+    $input.style.height = 'auto';
+    $input.style.height = Math.min($input.scrollHeight, 100) + 'px';
+  }
+  $input.addEventListener('input', autoSize);
+  $input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      send($input.value);
+    }
+  });
+  $send.addEventListener('click', function () { send($input.value); });
+
+  /* ---------------- Welcome + quick buttons ---------------- */
+  function showWelcome() {
+    /* El welcome NO pasa por send(): jamás dispara detección de lead (regla #18) */
+    pushBot(CFG.welcomeMessage, { instant: true, skipSave: true });
+    if (QUICK_BUTTONS.length) {
+      pushCTA(QUICK_BUTTONS.map(function (b) {
+        return { label: b.label, onClick: function () { send(b.mensaje); } };
+      }));
+    }
+  }
+  function restoreHistory() {
+    var hist = loadMessages();
+    if (!hist.length) return false;
+    hist.forEach(function (m) {
+      if (m.role === 'user') pushUser(m.text, { skipSave: true });
+      else pushBot(m.text, { instant: true, skipSave: true });
+    });
+    return true;
+  }
+
+  /* ---------------- Open / close / reset ---------------- */
+  function openChat() {
+    isOpen = true;
+    root.classList.add('ijv-open');
+    launcher.style.display = 'none';
+    if (!welcomed) {
+      welcomed = true;
+      getSessionId(); /* aplica TTL antes de restaurar */
+      if (!restoreHistory()) showWelcome();
+    }
+    setTimeout(function () { $input.focus(); }, 200);
+  }
+  function closeChat() {
+    isOpen = false;
+    root.classList.remove('ijv-open');
+    launcher.style.display = 'flex';
+  }
+  launcher.addEventListener('click', openChat);
+  $close.addEventListener('click', closeChat);
+  $reset.addEventListener('click', function () {
+    resetSession();
+    $msgs.innerHTML = '';
+    showToast('Conversación reiniciada');
+    setTimeout(showWelcome, 250);
+  });
+
+  /* ---------------- API pública opcional ---------------- */
+  window.probuildingAgent = {
+    open:  openChat,
+    close: closeChat,
+    reset: function () { $reset.click(); },
+    send:  send
+  };
+})();
+
+  </script>
+</body>
+</html>
