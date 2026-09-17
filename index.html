@@ -249,10 +249,10 @@ h1,h2,h3,h4{margin:0}
       <div>
         <h5>PROYECTOS EN VENTA</h5>
         <ul>
-          <li><a href="#proyectos">OCEAN IV</a></li>
-          <li><a href="#proyectos">OCEAN V</a></li>
-          <li><a href="#proyectos">OCEAN VI</a></li>
-          <li><a href="#proyectos">PICO ALTO I</a></li>
+          <li><a href="#proyectos">OCEAN 4</a></li>
+          <li><a href="#proyectos">OCEAN 5</a></li>
+          <li><a href="#proyectos">OCEAN 6</a></li>
+          <li><a href="#proyectos">PICO ALTO 1</a></li>
         </ul>
       </div>
     </div>
@@ -606,7 +606,7 @@ window["probuildingAgentConfig"] = Object.assign(window["probuildingAgentConfig"
       '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />' +
       '<div>' +
         '<div class="ijv-title">' + escapeHtml(CFG.clientName) + '</div>' +
-        '<div class="ijv-sub">' + escapeHtml(CFG.agentName) + ' · ' + escapeHtml(CFG.headerSubtitle) + '</div>' +
+        '<div class="ijv-sub">' + escapeHtml(CFG.headerSubtitle) + '</div>' +
       '</div>' +
       '<div class="ijv-actions">' +
         '<button type="button" class="ijv-reset" aria-label="Reiniciar conversación" title="Nueva conversación">⟳</button>' +
@@ -661,6 +661,17 @@ window["probuildingAgentConfig"] = Object.assign(window["probuildingAgentConfig"
     $msgs.scrollTop = $msgs.scrollHeight;
     if (typeof requestAnimationFrame === 'function') {
       requestAnimationFrame(function () { $msgs.scrollTop = $msgs.scrollHeight; });
+    }
+  }
+  /* Estado inicial "solo welcome": el saludo es mas alto que el contenedor y
+   * scrollToBottom() lo deja cortado por arriba. Se ancla arriba SOLO en ese
+   * caso — con historial restaurado o con respuestas nuevas se sigue bajando.
+   * El rAF se registra despues de los de scrollToBottom (mismo frame, orden de
+   * registro) para que Safari/iOS no lo pise (regla #19). */
+  function scrollToTop() {
+    $msgs.scrollTop = 0;
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(function () { $msgs.scrollTop = 0; });
     }
   }
   function showToast(t) {
@@ -915,6 +926,8 @@ window["probuildingAgentConfig"] = Object.assign(window["probuildingAgentConfig"
         return { label: b.label, onClick: function () { send(b.mensaje); } };
       }));
     }
+    /* Hilo con solo el welcome: se lee desde la primera linea, no desde el final. */
+    scrollToTop();
   }
   function restoreHistory() {
     var hist = loadMessages();
